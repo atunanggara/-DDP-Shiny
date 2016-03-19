@@ -20,9 +20,9 @@ shinyUI(pageWithSidebar(
     sliderInput('id8', 'Discussion Section (%)', 0, min = 0, max = 100, 
                 step = 1),
     br(),
-    p(strong(em("Documentation:",a("Final Grade Counts",href="Readme.md")))),
+    p(strong(em("Documentation:",a("Final Grade Counts",href="https://github.com/atunanggara/DDP-Shiny/blob/master/Readme.md")))),
     br(),
-    p(strong(em("Github Repository:",a("Developing Data Products",href="Readme.md"))))
+    p(strong(em("Github Repository:",a("Developing Data Products",href="https://github.com/atunanggara/DDP-Shiny"))))
     ),
   mainPanel(
     tabsetPanel(
