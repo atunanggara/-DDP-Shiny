@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Final Grade Breakdown</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Final Grade Breakdown">
+  <meta name="author" content="Atun Anggara">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Final Grade Breakdown</h1>
+    <h2>Developing Data Products - Shiny</h2>
+    <p>Atun Anggara<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Motivation and Introduction of the App</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>When students get their midterm grade, they often do not know how to interpret their scores with respect to their final grades. This shiny Final Grade Breakdown app is created to help students see their standings in the class with their given grades so far.</p>
+
+<p>The application calculate final grade based on each component earned in the span of a course. Total final grades can be broken down into: </p>
+
+<ol>
+<li>Midterm exams (40%)</li>
+<li>Final exam (20%)</li>
+<li>Homework (10%)</li>
+<li>Reading Quiz (5%)</li>
+<li>Laboratory grade (15%)</li>
+<li>Discussion section (10%)</li>
+</ol>
+
+<p>Once the data is weighted, the program will convert the raw numerical total grade (out of 100) into a letter grade (from A to F). </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Shiny App: FinalGradeBreakdown</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="/Users/tanggara/Documents/LearningR/DevelopingDataProduct/github/mydeck/shinyappspreview.png" alt="Shiny App Preview"></p>
+
+<p><a href="https://atunanggara.shinyapps.io/FinalGradeBreakdown">Final Grade Breakdown App hosted by shinyapps.io</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Computational Background</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Average of midterm grades:</p>
+
+<p>\[
+\frac{\text{Midterm 1}+\text{Midterm 2}+\text{Midterm 3}}{3} \times \frac{4}{10}
+\]</p>
+
+<p>Average of non-midterm grades:
+\[
+\text{HW} \times 0.10 + \text{Reading Quiz} \times 0.05 + \text{Laboratory Grade} \times 0.15 + \text{Discussion Section} \times 0.10
+\]</p>
+
+<p>Total grades:
+\[
+\text{average of midterm grades} + \text{average of non-midterm grades} + \text{final exam score} \times 0.20
+\]</p>
+
+<p>Letter grades: </p>
+
+<p>If total grades fall on the scale of 0-59: F, 60-69: D, 70-72: C-, 73-76: C, 77-79: C+, 80-82: B-, 83-86: B, 87-89: B+, 90-92: A-, 93-100: A</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Static Example: FinalGradeBreakdown App</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>If I were to input: Midterm exams: 95, 75, 85 on all three midterms, Final exam: 60%, Homework: 90%, Reading Quiz: 100 %, Laboratory grade: 90%, and Discussion section: 100%. The shiny app will run r codes and produced: </p>
+
+<pre><code>## Average of Midterm Grades (out of 40%): 34
+</code></pre>
+
+<pre><code>## Average of non-midterm Grades (out of 40%): 37.5
+</code></pre>
+
+<pre><code>## Raw Total Grade (out of 100): 83.5
+</code></pre>
+
+<pre><code>## Your final grade: B
+</code></pre>
+
+<p><a href="https://github.com/atunanggara/DDP-Shiny">Github Repository</a></p>
+
+<p>If you have any questions or comments, feel free to contact me!</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Motivation and Introduction of the App'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Shiny App: FinalGradeBreakdown'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Computational Background'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Static Example: FinalGradeBreakdown App'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
