@@ -30,7 +30,7 @@ Once the data is weighted, the program will convert the raw numerical total grad
 
 ## Shiny App: FinalGradeBreakdown
 
-![Shiny App Preview](/Users/tanggara/Documents/LearningR/DevelopingDataProduct/github/mydeck/shinyappspreview.png)
+![Shiny App Preview](shinyappspreview.png)
 
 [Final Grade Breakdown App hosted by shinyapps.io](https://atunanggara.shinyapps.io/FinalGradeBreakdown)
 
