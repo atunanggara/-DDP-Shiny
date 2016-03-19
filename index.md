@@ -80,7 +80,7 @@ If I were to input: Midterm exams: 95, 75, 85 on all three midterms, Final exam:
 ## Your final grade: B
 ```
 
-[Github Repository](https://github.com/atunanggara/DDP-Shiny)
+[Github Repository for slidify](https://github.com/atunanggara/DDP-Shiny/tree/gh-pages)
 
 If you have any questions or comments, feel free to contact me!
 
